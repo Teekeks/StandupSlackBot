@@ -1,0 +1,8 @@
+{
+  "bot_token": "xoxb-",
+  "channel": "#cool-channel",
+  "users": [
+    "me", "you"
+  ],
+  "time_of_day": "08:30"
+}
