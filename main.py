@@ -22,8 +22,12 @@ def post_message():
     })
 
 
-# schedule daily
-schedule.every().day.at(cfg['time_of_day']).do(post_message)
+# schedule every work day
+schedule.every().monday.at(cfg['time_of_day']).do(post_message)
+schedule.every().tuesday.at(cfg['time_of_day']).do(post_message)
+schedule.every().wednesday.at(cfg['time_of_day']).do(post_message)
+schedule.every().thursday.at(cfg['time_of_day']).do(post_message)
+schedule.every().friday.at(cfg['time_of_day']).do(post_message)
 
 while True:
     schedule.run_pending()
