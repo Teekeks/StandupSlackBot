@@ -4,5 +4,14 @@
   "users": [
     "me", "you"
   ],
-  "time_of_day": "08:30"
+  "schedule": {
+    "mon": {"time_of_day": "08:59"},
+    "tue": {"time_of_day": "08:59"},
+    "wed": {"time_of_day": "09:29"},
+    "thu": {"time_of_day": "08:59"},
+    "fri": {
+      "time_of_day": "08:59",
+      "exclude": ["me"]
+    }
+  }
 }
