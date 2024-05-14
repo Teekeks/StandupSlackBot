@@ -34,9 +34,9 @@ day_lookup = {
 }
 
 # create schedule from config
-for day, schedule in cfg['schedule'].items():
-    print(f'scheduled posting for {day} at {schedule["time_of_day"]}')
-    day_lookup[day].at(schedule['time_of_day']).do(partial(post_message, schedule))
+for day, sched in cfg['schedule'].items():
+    print(f'scheduled posting for {day} at {sched["time_of_day"]}')
+    day_lookup[day].at(sched['time_of_day']).do(partial(post_message, sched))
 
 while True:
     schedule.run_pending()
